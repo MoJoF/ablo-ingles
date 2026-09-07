@@ -1,0 +1,26 @@
+body {
+    background: #F8F4E1;
+    padding: 0 17.7vw;
+}
+
+header {
+    border: 5px solid var(--bg-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    background: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}

@@ -1,0 +1,120 @@
+.site-title {
+    font-size: 64px;
+    font-family: "Akronim", cursive;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-link {
+    font-size: 40px;
+    font-family: "Alumni Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.button-text {
+    font-size: 24px;
+    font-family: "Alumni Sans", sans-serif;
+    font-weight: 800;
+    color: var(--bg-color);
+}
+
+/* СТИЛИ СПИСКА ПОСТОВ */
+.post-text-pinned {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 32px;
+    color: var(--bg-color);
+}
+
+.post-link-pinned {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 32px;
+    color: var(--bg-color);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.post-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.post-link {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 32px;
+    color: var(--bg-color);
+    font-weight: 500;
+    font-style: italic;
+}
+/* СТИЛИ СПИСКА ПОСТОВ */
+
+
+/* СТИЛИ СТРАНИЦЫ ПОСТА */
+.post-detail-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 36px;
+    color: var(--primary-color);
+}
+/* СТИЛИ СТРАНИЦЫ ПОСТА */
+
+/* СТИЛИ СТРАНИЦЫ ТЕСТИРОВАНИЯ */
+.question-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 48px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.answer-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 40px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.result-test-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 48px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+/* СТИЛИ СТРАНИЦЫ ТЕСТИРОВАНИЯ */
+
+/* Тексты страницы */
+.page span, .page p, .page li {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+/* Тексты страницы */
+
+.side-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.counter-num {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 128px;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.footer-text {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 36px;
+    color: var(--bg-color);
+}
+
+.footer-dev-text {
+    font-family: "Alfa Slab One", cursive;
+    font-size: 36px;
+    color: var(--bg-color);
+}
