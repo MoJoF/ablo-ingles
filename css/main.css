@@ -1,6 +1,6 @@
 body {
-    background: var(--background-color);
     padding: 0 17.7vw;
+    background: var(--background-color);
     color: var(--primary-color);
     transition: all 0.3s ease;
 }
@@ -12,8 +12,6 @@ body.dark {
     --secondary-color: #664729;
     --bg-color: #664729;
 }
-
-
 
 header {
     border: 5px solid var(--bg-color);
