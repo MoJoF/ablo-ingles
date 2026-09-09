@@ -2,11 +2,16 @@ body {
     background: var(--background-color);
     padding: 0 17.7vw;
     color: var(--primary-color);
-    transition: background-color .3s, color .3s;
+    transition: all 0.3s ease;
 }
 
 /* Прописать тёмную тему */
-body.dark {}
+body.dark {
+    --background-color: #262626;
+    --primary-color: #DDB68C;
+    --secondary-color: #664729;
+    --bg-color: #664729;
+}
 
 
 
