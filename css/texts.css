@@ -20,6 +20,7 @@
     font-family: "Alumni Sans", sans-serif;
     font-weight: 800;
     color: var(--bg-color);
+    text-decoration: none;
 }
 
 /* СТИЛИ СПИСКА ПОСТОВ */
