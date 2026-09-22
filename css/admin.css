@@ -1,0 +1,10 @@
+.create-words {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row, .post-data {
+    display: flex;
+    gap: 10px;
+}

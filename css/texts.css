@@ -23,6 +23,14 @@
     text-decoration: none;
 }
 
+.header-text {
+    font-size: 36px;
+    font-family: "Alumni Sans", sans-serif;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
 /* СТИЛИ СПИСКА ПОСТОВ */
 .post-text-pinned {
     font-family: "Alumni Sans", sans-serif;

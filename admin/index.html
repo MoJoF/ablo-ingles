@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/vars.css">
+    <link rel="stylesheet" href="/css/texts.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="site-title">ablo-ingles</a>
+        <nav>
+            <a href="/about" class="nav-link">О нас</a>
+            <a href="/ad" class="nav-link">Реклама</a>
+            <a href="/contacts" class="nav-link">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page">
+            <h2 class="header-text">Создать пост</h2>
+    
+            <textarea class="post-text" rows="5" placeholder="Текст поста"></textarea>
+
+            <div class="post-data">
+                <input type="text" placeholder="Автор" class="author">
+                <input type="text" placeholder="Название книги" class="title">
+            </div>
+
+            <div class="create-words">
+                <div class="row">
+                    <input type="text" class="en" placeholder="Слово на английском">
+                    <input type="text" class="es" placeholder="Слово на испанском">
+                    <input type="text" class="ru" placeholder="Слово на русском">
+                </div>
+            </div>
+            
+            <button class="add-row">Добавить строку</button>
+            <button class="create-post-btn">Создать пост</button>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">Сайт разработан в 2025 году</p>
+        <p class="footer-dev-text">© flybuk</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const post = {}
+
+            // Добавление нового ряда слов
+            document.querySelector('.add-row').addEventListener('click', function() {
+                const frag = new DocumentFragment()
+                const rowEl = document.createElement('div')
+                rowEl.className = "row"
+
+                const inputEn = document.createElement('input')
+                inputEn.className = "en"
+                inputEn.placeholder = "Слово на английском"
+                rowEl.appendChild(inputEn)
+
+                const inputEs = document.createElement('input')
+                inputEs.className = "es"
+                inputEs.placeholder = "Слово на испанском"
+                rowEl.appendChild(inputEs)
+
+                const inputRu = document.createElement('input')
+                inputRu.className = "ru"
+                inputRu.placeholder = "Слово на русском"
+                rowEl.appendChild(inputRu)
+
+                frag.appendChild(rowEl)
+
+                document.querySelector('.create-words').appendChild(frag)
+            })
+        
+            // Сбор данных и добавление поста
+            document.querySelector('.create-post-btn').addEventListener('click', function() {
+                post['text'] = document.querySelector('textarea').value
+                post['author'] = document.querySelector('.author').value
+                post['title'] = document.querySelector('.title').value
+                post['words'] = []
+
+                document.querySelectorAll('.create-words .row').forEach(row => {
+                    let words = {}
+                    words['en'] = row.querySelector('.en').value
+                    words['es'] = row.querySelector('.es').value
+                    words['ru'] = row.querySelector('.ru').value
+                    post['words'].push(words)
+                })
+
+                fetch('https://ablo-ingles.omyraucy.workers.dev/add-post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(post)
+                })
+                    .then(resp => resp.json())
+                    .then(data => { if (data.status === 'success') alert('Пост успешно создан') })
+                    .catch(e => console.error(e))
+            })
+        })
+    </script>
+</body>
+</html>

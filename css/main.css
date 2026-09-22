@@ -28,7 +28,54 @@ header nav {
 }
 
 main {
-    margin: 50px 0;
+    margin: 20px 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 24px;
+    width: fit-content;
+}
+
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    outline: none;
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 24px;
+}
+
+textarea::placeholder {
+    color: var(--primary-color);
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 24px;
+}
+
+input::placeholder {
+    color: var(--primary-color);
 }
 
 .menu {
@@ -48,6 +95,7 @@ main {
 
 footer {
     background: var(--primary-color);
+    margin-top: 20px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
