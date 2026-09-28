@@ -33,6 +33,8 @@
                 <span class="button-text">Словарь</span>
             </a>
         </div>
+
+        <div id="posts-cont"></div>
     </main>
 
     <footer>
@@ -40,11 +42,47 @@
         <p class="footer-dev-text">© flybuk</p>
     </footer>
 
-    <script>
-        localStorage.setItem('jwt', 1)
-    </script>
-
     <script src="/js/checkAuth.js"></script>
+
+    <script>
+        function renderPosts(data) {
+            const cont = document.querySelector('#posts-cont')
+            const frag = new DocumentFragment()
+
+            const isAuth = sessionStorage.getItem('isAuth')
+
+            if (!isAuth) {
+                data.forEach(post => {
+                    const postCont = document.createElement('div')
+                    postCont.className = "post-cont"
+
+                    const postPreview = document.createElement('span')
+                    postPreview.className = "post-preview"
+                    postPreview.textContent = post.post_text.split(" ").filter((w, i) => i < 10).join(" ")
+
+                    postCont.appendChild(postPreview)
+
+                    frag.appendChild(postCont)
+                })
+
+                cont.appendChild(frag)
+            } else {
+                data.forEach(post => {
+                    
+                })
+            }
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://ablo-ingles.omyraucy.workers.dev/posts', {
+                method: "GET",
+                headers: { "Content-Type": 'application/json' }
+            })
+                .then(resp => resp.json())
+                .then(data => renderPosts(data.posts))
+        })
+    </script>
 </body>
 
 </html>
