@@ -24,11 +24,12 @@
 }
 
 .header-text {
-    font-size: 36px;
+    font-size: 48px;
     font-family: "Alumni Sans", sans-serif;
     font-weight: 800;
     color: var(--primary-color);
     text-decoration: none;
+    line-height: 100%;
 }
 
 /* СТИЛИ СПИСКА ПОСТОВ */
